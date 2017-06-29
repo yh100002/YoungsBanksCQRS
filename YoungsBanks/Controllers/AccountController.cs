@@ -64,8 +64,8 @@ namespace YoungsBanks.Controllers
         }
 
         
-        [HttpGet]
-        public Account Balance(int accountNumber)
+        [HttpPost]
+        public Account Balance([FromBody]int accountNumber)
         {
             var account = _repository.GetAccount(accountNumber);
 
